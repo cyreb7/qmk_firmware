@@ -65,7 +65,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
 
   [QWERTY] = LAYOUT_3x5_3(
-     KC_Q,    KC_W,    KC_E,    KC_R,    KC_oT,           KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,
+     KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,           KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,
      HOME_A,  HOME_S2, HOME_D,  HOME_F,  KC_G,           KC_H,    HOME_J,  HOME_K,  HOME_L,  HOME_QU,
      KC_Z,    ALT_X,   KC_C,    KC_V,    KC_B,           KC_N,    KC_M,    KC_COMM, ALT_DO,  KC_SLSH,
                                 T_ESC,   T_SPACE,        T_BSPC,  T_DEL,

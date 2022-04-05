@@ -2,7 +2,7 @@
 
 #ifdef KEYBOARD_handwired_dactyl_manuform_3x5_3
     #include "3x5_3.h"
-#if defined(KEYBOARD_handwired_dactyl_manuform_4x5)
+#elif defined(KEYBOARD_handwired_dactyl_manuform_4x5)
 #    include "4x5.h"
 #elif defined(KEYBOARD_handwired_dactyl_manuform_4x6)
 #    include "4x6.h"
