@@ -42,7 +42,7 @@ enum layers {
 #define T_ENT LT(SYM, KC_ENT)
 
 // Invert
-#define INVERT LT(INVERT, KC_Q)
+#define INVERT_Q LT(INVERT, KC_Q)
 
 // Alt Toggles
 #define T_BASE TG(BASE)
@@ -55,11 +55,11 @@ enum layers {
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // Base qwerty layout with modifier keys. 
   [BASE] = LAYOUT_3x5_3(
-     INVERT,  KC_W,    KC_E,    KC_R,    KC_T,           KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,
-     HOME_A,  HOME_S,  HOME_D,  HOME_F,  KC_G,           KC_H,    HOME_J,  HOME_K,  HOME_L,  HOME_QU,
-     KC_Z,    ALT_X,   KC_C,    KC_V,    KC_B,           KC_N,    KC_M,    KC_COMM, ALT_DO,  KC_SLSH,
-                                T_ESC,   T_SPACE,        T_BSPC,  T_DEL,
-                                         T_TAB,          T_ENT
+     INVERT_Q,  KC_W,    KC_E,    KC_R,    KC_T,           KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,
+     HOME_A,    HOME_S,  HOME_D,  HOME_F,  KC_G,           KC_H,    HOME_J,  HOME_K,  HOME_L,  HOME_QU,
+     KC_Z,      ALT_X,   KC_C,    KC_V,    KC_B,           KC_N,    KC_M,    KC_COMM, ALT_DO,  KC_SLSH,
+                                      T_ESC,   T_SPACE,        T_BSPC,  T_DEL,
+                                               T_TAB,          T_ENT
   ),
   // Gaming layer where left is shifted to the right.
   // Switch to the alt layouts in the NUM layer.  (holding backspace)
@@ -97,24 +97,24 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,        XXXXXXX, KC_PGDN, KC_UP,   KC_PGUP, XXXXXXX,
      KC_LGUI, KC_LALT, KC_LCTL, KC_LSFT, XXXXXXX,        KC_HOME, KC_LEFT, KC_DOWN, KC_RGHT, KC_END,
      XXXXXXX, KC_RALT, XXXXXXX, XXXXXXX, XXXXXXX,        KC_CAPS, KC_PGDN, XXXXXXX, KC_PGUP, KC_INS,
-                        	      XXXXXXX, XXXXXXX,        KC_BSPC, KC_DEL,
-					                               XXXXXXX, 	     KC_ENT  
+                                XXXXXXX, XXXXXXX,        KC_BSPC, KC_DEL,
+                                         XXXXXXX,        KC_ENT
   ),
   // Mouse
   [MOUSE] = LAYOUT_3x5_3(
      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,        XXXXXXX, KC_WH_D, KC_MS_U, KC_WH_U, XXXXXXX,
      KC_LGUI, KC_LALT, KC_LCTL, KC_LSFT, XXXXXXX,        KC_WH_L, KC_MS_L, KC_MS_D, KC_MS_R, KC_WH_R,
      XXXXXXX, KC_RALT, XXXXXXX, XXXXXXX, XXXXXXX,        KC_CAPS, KC_WH_D, XXXXXXX, KC_WH_U, XXXXXXX,
-                        	      XXXXXXX, XXXXXXX,        KC_BTN3, KC_BTN2,
-					                               XXXXXXX,	       KC_BTN1  
+                                XXXXXXX, XXXXXXX,        KC_BTN3, KC_BTN2,
+                                         XXXXXXX,        KC_BTN1
   ),
   // Media
   [MEDIA] = LAYOUT_3x5_3(
      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,        XXXXXXX, KC_BRID, KC_VOLU, KC_BRIU, XXXXXXX,
      KC_LGUI, KC_LALT, KC_LCTL, KC_LSFT, XXXXXXX,        XXXXXXX, KC_MPRV, KC_VOLD, KC_MNXT, XXXXXXX,
      XXXXXXX, KC_RALT, XXXXXXX, XXXXXXX, XXXXXXX,        XXXXXXX, KC_BRID, XXXXXXX, KC_BRIU, XXXXXXX,
-                        	      XXXXXXX, XXXXXXX,        KC_MPLY, KC_MUTE,
-					                               XXXXXXX,	       KC_MSTP  
+                                XXXXXXX, XXXXXXX,        KC_MPLY, KC_MUTE,
+                                         XXXXXXX,        KC_MSTP
   ),
   // Numbers
   [NUM] = LAYOUT_3x5_3(
@@ -122,7 +122,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      KC_SCLN, KC_4,    KC_5,    KC_6,    KC_EQL,         XXXXXXX, KC_RSFT, KC_RCTL, KC_LALT, KC_RGUI,
      KC_GRV,  KC_1,    KC_2,    KC_3,    KC_BSLS,        XXXXXXX, XXXXXXX, XXXXXXX, KC_RALT, XXXXXXX,
                                 KC_DOT,  KC_0,           XXXXXXX, XXXXXXX,
-					                               KC_MINS,	       XXXXXXX  
+                                         KC_MINS,        XXXXXXX
   ),
   // Symbols
   [SYM] = LAYOUT_3x5_3(
@@ -130,7 +130,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      KC_COLN, KC_DLR,  KC_PERC, KC_CIRC, KC_PLUS,        XXXXXXX, KC_RSFT, KC_RCTL, KC_LALT, KC_RGUI,
      KC_TILD, KC_EXLM, KC_AT,   KC_HASH, KC_PIPE,        XXXXXXX, XXXXXXX, XXXXXXX, KC_RALT, XXXXXXX,
                                 KC_LPRN, KC_RPRN,        XXXXXXX, XXXXXXX,
-					                               KC_UNDS,	       XXXXXXX  
+                                         KC_UNDS,        XXXXXXX
   ),
   // Function Keys
   [FUN] = LAYOUT_3x5_3(
@@ -138,7 +138,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      KC_F11,  KC_F4,   KC_F5,   KC_F6,   KC_SCRL,        XXXXXXX, KC_RSFT, KC_RCTL, KC_LALT, KC_RGUI,
      KC_F10,  KC_F1,   KC_F2,   KC_F3,   KC_PAUS,        XXXXXXX, XXXXXXX, XXXXXXX, KC_RALT, XXXXXXX,
                                 XXXXXXX, KC_SPC,         XXXXXXX, XXXXXXX,
-					                               KC_TAB,	       XXXXXXX  
+                                         KC_TAB,         XXXXXXX
   ),
   // Holding Q inverts the thumb keys, so you can use the mouse and also hit enter.
   [INVERT] = LAYOUT_3x5_3(
