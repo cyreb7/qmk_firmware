@@ -18,3 +18,6 @@ RGBLIGHT_ENABLE = no       # Enable WS2812 RGB underlight.
 
 # Do not enable SLEEP_LED_ENABLE. it uses the same timer as BACKLIGHT_ENABLE
 SLEEP_LED_ENABLE = no    # Breathing sleep LED during USB suspend
+
+# https://github.com/qmk/qmk_firmware/blob/master/docs/feature_split_keyboard.md#firmware-configuration
+SPLIT_KEYBOARD = yes

@@ -21,11 +21,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #define USE_SERIAL
 
-// #define MASTER_LEFT
-// #define MASTER_RIGHT
-#define EE_HANDS
-// Rows are doubled-up
-
 // Configure the global tapping term (default: 200ms)
 #define TAPPING_TERM 200
 
