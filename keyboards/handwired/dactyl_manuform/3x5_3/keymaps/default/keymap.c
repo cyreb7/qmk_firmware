@@ -35,6 +35,8 @@ enum layers {
 #define T_RGH2 LSFT_T(KC_ENTER)
 #define T_RGH3 LCTL_T(KC_TAB)
 
+#define TO_FUN MO(FUNCTION)
+
 // Game layer
 #define TO_GAME TO(GAME1)
 #define TO_BASE TO(BASE)
@@ -56,7 +58,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      KC_LBRC, KC_RBRC, KC_QUES, KC_SLSH, KC_CIRC,       KC_PPLS, KC_7,    KC_8,    KC_9,    KC_PERC,
      KC_LPRN, KC_RPRN, KC_QUOT, KC_DQUO, KC_COLN,       KC_PMNS, KC_5,    KC_5,    KC_6,    KC_SCLN,
      KC_LABK, KC_RABK, KC_DLR,  KC_EQL,  KC_HASH,       KC_UNDS, KC_1,    KC_2,    KC_3,    KC_0,
-                                KC_TRNS, KC_TRNS,       KC_TRNS, KC_TRNS,
+                                KC_TRNS, KC_TRNS,       KC_TRNS, TO_FUN,
                                          KC_TRNS,       KC_TRNS
   ),
 
@@ -66,7 +68,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      KC_PIPE, KC_AMPR, KC_EXLM, KC_BSLS, KC_TILD,       XXXXXXX, KC_HOME, KC_UP,   KC_END,   XXXXXXX,
      KC_LCBR, KC_RCBR, KC_GRV,  KC_AT,   KC_ASTR,       KC_PGUP, KC_LEFT, KC_DOWN, KC_RIGHT, KC_PGDN,
      KC_BSPC, KC_DEL,  KC_LALT, KC_LSFT, KC_LGUI,       KC_MPRV, KC_MNXT, KC_MPLY, KC_VOLD,  KC_VOLU,
-                                KC_TRNS, KC_TRNS,       KC_TRNS, KC_TRNS,
+                                TO_FUN,  KC_TRNS,       KC_TRNS, KC_TRNS,
                                          KC_TRNS,       KC_TRNS
   ),
 
